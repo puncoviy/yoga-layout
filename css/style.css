@@ -1,10 +1,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 23px;
-    color: #636363;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8E80A9;
+
+    /* font-family: 'Abhaya Libre', serif; */
+    /* font-family: 'Caveat', cursive; */
+    
+    /* font-family: 'Francois One', sans-serif; */
 }
 
 .container {
@@ -25,8 +30,10 @@ body {
 }
 
 .title {
+    font-family: 'Abhaya Libre', serif;
+    font-style: normal;
     font-weight: 700;
     font-size: 30px;
-    line-height: 124.41%;
-    color: #000;
+    line-height: 15px;
+    color: inherit;
 }
