@@ -5,14 +5,6 @@ body {
     font-size: 12px;
     line-height: 20px;
     color: #8E80A9;
-    background-image: url(../img/bg.jpg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    /* font-family: 'Abhaya Libre', serif; */
-
-
     /* font-family: 'Francois One', sans-serif; */
 }
 
@@ -34,15 +26,32 @@ body {
 }
 
 .title {
-    font-family: 'Abhaya Libre', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
-    line-height: 15px;
+    line-height: 30px;
     color: inherit;
+    text-align: center;
 }
 
 /* HEADER */
+
+.first-screen {
+    position: relative;
+    background-image: url(../img/bg.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.first-screen::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
 
 .header {
     padding-top: 50px;
@@ -99,15 +108,6 @@ body {
 
 .promo {
     padding-bottom: 187px;
-    position: relative;
-}
-.promo::after {
-    position: absolute;
-    bottom: 0;
-    content: '';
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .promo__subtitle {
@@ -176,4 +176,137 @@ body {
 .promo__links-city {
     font-size: 16px;
     line-height: 15px;
+}
+
+/* LESSONS */
+
+.lessons {
+    position: relative;
+    margin-bottom: 51px;
+    background-color: #fff;
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-counter-clockwise {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.lessons::before,
+.lessons::after {
+    position: absolute;
+    content: '';
+    background-image:url(../img/flower.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 390px;
+    height: 390px;
+    z-index: 0;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.lessons::before {
+    animation-name: rotate-clockwise;
+    top: -20px;
+    right: 0;
+}
+.lessons::after {
+    animation-name: rotate-counter-clockwise;
+    bottom: -105px;
+    right: 0;
+}
+
+.lessons__title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+.lessons__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 70%;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lessons__list::before {
+    position: absolute;
+    content: '';
+    background-image:url(../img/flower.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 903px;
+    height: 903px;
+    top: -135px;
+    left: -45px;
+    z-index: 0;
+    animation-name: rotate-clockwise;
+    animation-duration: 200s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.lessons__item {
+    width: 250px;
+    height: 300px;
+}
+.lessons__item:nth-child(1),
+.lessons__item:nth-child(4) {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.lessons__item-box {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    transition: transform .7s;
+}
+.lessons__item-box:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+.lessons__item-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.lessons__item-info {
+    padding: 20px;
+    background-color: #fff;
+}
+.lessons__item-title {
+    text-align-last: left;
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 10px;
+}
+.lessons__item-shedule {
+    font-size: 12px;
+    line-height: 20px;
+}
+.lessons__item-shedule:nth-last-child(3) {
+    margin-bottom: 15px;
+}
+.lessons__item-instructor {
+    font-size: 12px;
+    line-height: 15px;
+    color: #E65C7B;
 }
