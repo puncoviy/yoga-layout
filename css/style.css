@@ -310,3 +310,122 @@ body {
     line-height: 15px;
     color: #E65C7B;
 }
+
+/* SUBSCRIPTIONS */
+
+.subscription {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.subscription::before {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    content: url(../img/clouds.png);
+}
+
+.subscription__title {
+    margin-bottom: 60px;
+}
+
+.subscription__duration-list {
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.subscription__duration-link {
+    text-decoration-color: transparent;
+    font-size: 12px;
+    line-height: 20px;
+    color: #E65C7B;
+    transition: text-decoration-color .7s;
+}
+
+.subscription__duration-link:hover {
+    text-decoration-color: #E65C7B;
+}
+
+.subscription__duration-link.active {
+    text-decoration: underline;
+}
+
+.subscription__price-list {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+
+.subscription__price-item {
+    padding: 58px 21px 25px;
+    width: 265px;
+    height: 287px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+}
+
+.subscription__price-item:nth-child(2) {
+    order: 1;
+}
+
+.subscription__price-item:nth-child(3) {
+    padding: 63px 39px 20px;
+    width: 300px;
+    height: 331px;
+}
+
+.subscription__price-item--title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 19px;
+}
+
+.subscription__price-item:nth-child(3) .subscription__price-item--title {
+    font-size: 30px;
+}
+
+.subscription__price-item--restrictions {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #E65C7B;
+}
+
+.subscription__price-item--restrictions+.subscription__price-item--restrictions {
+    margin-bottom: 26px;
+}
+
+.subscription__price-item:nth-child(3) .subscription__price-item--restrictions+.subscription__price-item--restrictions {
+    margin-bottom: 38px;
+}
+
+.subscription__price-item--price {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 27px;
+}
+
+.subscription__price-item:nth-child(3) .subscription__price-item--price {
+    margin-bottom: 51px;
+}
+
+.subscription__price-item--btn {
+    display: block;
+    text-decoration: none;
+    padding: 19px 15px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background-color: #8E80A9;
+}
