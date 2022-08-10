@@ -24,9 +24,10 @@ nextSlideBtn.addEventListener('click', function(){
 });
 
 for (let n=0; n<instructorBtn.length; n++) {
-    console.log('penis'+n)
     instructorBtn[n].addEventListener('click', function(){
-        console.log(n)
-        // sliderItem[n].classList.add('active');
+        for (let x=0; x<sliderItem.length; x++) {
+            sliderItem[x].classList.remove('active')
+        }
+        sliderItem[n].classList.add('active');
     })
 }
