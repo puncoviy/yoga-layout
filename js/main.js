@@ -9,6 +9,9 @@ const currentSlide = document.getElementById('current-slide');
 const instructorBtn = document.querySelectorAll('.instructors__min-item');
 let i=0;
 
+const subLink = document.querySelectorAll('.subscription__duration-link');
+const subPrice = document.querySelectorAll('.subscription__price-item--price');
+
 const burgerBtn = document.querySelector('.burger-box');
 const burgerIcon = document.querySelector('.burger-menu');
 const menuList = document.querySelector('.header__menu-list');
@@ -23,6 +26,29 @@ burgerBtn.addEventListener('click', function(){
         }
     })
 })
+
+for (let l=0; l<subLink.length; l++) {
+    subLink[l].addEventListener('click', function (e) {
+        e.preventDefault();
+        for (let y=0; y<subLink.length; y++) {
+            subLink[y].classList.remove('active')
+        }
+        subLink[l].classList.add('active');
+        if(l==0) {
+            subPrice[0].textContent='1 300 ₽';
+            subPrice[1].textContent='2 000 ₽';
+            subPrice[2].textContent='2 800 ₽';
+        } else if(l==1) {
+            subPrice[0].textContent='6 240 ₽';
+            subPrice[1].textContent='9 600 ₽';
+            subPrice[2].textContent='13 440 ₽';
+        } else {
+            subPrice[0].textContent='11 700 ₽';
+            subPrice[1].textContent='18 000 ₽';
+            subPrice[2].textContent='25 200 ₽';
+        }
+    })
+}
 
 $(function(){
     $('.reviews__slider').slick({
