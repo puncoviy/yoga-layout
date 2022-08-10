@@ -5,6 +5,24 @@ const currentSlide = document.getElementById('current-slide');
 const instructorBtn = document.querySelectorAll('.instructors__min-item');
 let i=0;
 
+$(function(){
+    $('.reviews__slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        nextArrow: '<div class="reviews__controls-right"></div>',
+        prevArrow: '<div class="reviews__controls-left"></div>',
+        autoplay: false,
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+});
+
 prevSlideBtn.addEventListener('click', function(){
     if (i>0) {
         sliderItem[i].classList.remove('active');
