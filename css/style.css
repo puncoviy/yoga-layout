@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1031,8 +1032,19 @@ body {
 }
 
 @media (max-width: 850px) {
+    .header {
+        padding-top: 0;
+    }
+    .lessons::before,
+    .lessons::after {
+        right: unset;
+        left: 30px;
+    }
     .lessons__list {
         max-width: 530px;
+    }
+    .lessons__list::before {
+        display: none;
     }
     .lessons__item:nth-child(1),
     .lessons__item:nth-child(4) {
@@ -1043,6 +1055,19 @@ body {
     }
     .subscription__price-item:nth-child(2) {
         order: 0;
+    }
+    .instructors::before {
+        display: none;
+    }
+    .instructors::after {
+        left: 0;
+    }
+    .reviews__title {
+        margin-bottom: 0;
+    }
+    .contacts__list {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -1073,6 +1098,12 @@ body {
     .promo__title {
         font-size: 165px;
         line-height: 165px;
+    }
+    .lessons::before,
+    .lessons::after,
+    .instructors::after {
+        height: 210px;
+        width: 210px;
     }
     .instructors__slider-img {
         width: 220px;
@@ -1108,6 +1139,24 @@ body {
     .subscription__price-item:nth-child(3) .subscription__price-item--price {
         margin-bottom: 27px;
     }
+    .contacts__inner {
+        flex-wrap: wrap-reverse;
+    }
+    .contacts__list {
+        flex-direction: row;
+        max-width: 250px;
+    }
+    .contacts__item {
+        width: 115px;
+    }
+    .contacts__item:nth-last-child(1) {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .promo__social-list {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1117,9 +1166,6 @@ body {
         width: unset;
         max-width: unset;
         align-items: center;
-    }
-    .lessons__list::before {
-        display: none;
     }
     .instructors__slider-item {
         flex-direction: column;
