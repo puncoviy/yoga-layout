@@ -1,3 +1,7 @@
+let scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 300
+});
+
 const sliderItem = document.querySelectorAll('.instructors__slider-item');
 const prevSlideBtn = document.querySelector('.instructors__controls-left');
 const nextSlideBtn = document.querySelector('.instructors__controls-right');
