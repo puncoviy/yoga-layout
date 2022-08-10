@@ -1077,6 +1077,12 @@ body {
     .instructors__slider-img {
         width: 220px;
     }
+    .gallery__list {
+        flex-wrap: nowrap;
+        justify-content: start;
+        padding: 30px 0;
+        overflow-x: scroll;
+    }
 }
 
 @media (max-width: 630px) {
