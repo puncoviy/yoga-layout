@@ -467,7 +467,7 @@ body {
 .subscription__price-item {
     padding: 58px 21px 25px;
     width: 265px;
-    height: 287px;
+    min-height: 287px;
     text-align: center;
     background: #FFFFFF;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
@@ -629,6 +629,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow-y: scroll;
 }
 .instructors__subtitle {
     display: inline-block;
@@ -1037,6 +1038,12 @@ body {
     .lessons__item:nth-child(4) {
         flex-basis: unset;
     }
+    .subscription__price-list {
+        flex-wrap: wrap;
+    }
+    .subscription__price-item:nth-child(2) {
+        order: 0;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1067,6 +1074,9 @@ body {
         font-size: 165px;
         line-height: 165px;
     }
+    .instructors__slider-img {
+        width: 220px;
+    }
 }
 
 @media (max-width: 630px) {
@@ -1076,6 +1086,21 @@ body {
     .promo__title {
         font-size: 90px;
         line-height: 110px;
+    }
+    .subscription__price-item:nth-child(3) {
+        width: 265px;
+        height: unset;
+        min-height: 287px;
+        padding: 58px 21px 25px;
+    }
+    .subscription__price-item:nth-child(3) .subscription__price-item--title {
+        font-size: 18px;
+    }
+    .subscription__price-item:nth-child(3) .subscription__price-item--restrictions+.subscription__price-item--restrictions {
+        margin-bottom: 26px;
+    }
+    .subscription__price-item:nth-child(3) .subscription__price-item--price {
+        margin-bottom: 27px;
     }
 }
 
@@ -1089,6 +1114,21 @@ body {
     }
     .lessons__list::before {
         display: none;
+    }
+    .instructors__slider-item {
+        flex-direction: column;
+        max-height: unset;
+        align-items: center;
+    }
+    .instructors__slider-img {
+        width: 100%;
+    }
+    .instructors__min-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .instructors__min-img {
+        max-height: 90px;
     }
 }
 
