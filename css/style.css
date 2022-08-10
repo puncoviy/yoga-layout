@@ -997,6 +997,14 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+@media (max-width: 1200px) {
+    .promo__subtitle,
+    .promo__title {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
 @media (max-width: 1100px) {
     .header-icon-box {
         display: flex;
@@ -1004,6 +1012,11 @@ body {
     .header__menu-phone {
         display: none;
     }
+    .promo__title {
+        font-size: 205px;
+        line-height: 205px;
+    }
+
     .reviews__item {
         height: fit-content;
     }
@@ -1030,6 +1043,23 @@ body {
     .burger-box {
         display: block;
     }
+    .promo__subtitle {
+        font-size: 38px;
+    }
+    .promo__title {
+        font-size: 165px;
+        line-height: 165px;
+    }
+}
+
+@media (max-width: 630px) {
+    .promo__subtitle {
+        font-size: 30px;
+    }
+    .promo__title {
+        font-size: 90px;
+        line-height: 110px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1040,6 +1070,20 @@ body {
         flex-direction: column;
         left: unset;
         gap: 15px;
+    }
+    .promo__title {
+        font-size: 80px;
+    }
+    .promo__btn {
+        padding-left: 60px;
+    }
+    .promo__btn::before {
+        left: -20px;
+        top: 5px;
+    }
+    .promo__btn::after {
+        left: 0;
+        top: 23px;
     }
     .reviews__item {
         padding: 72px 20px 30px;
